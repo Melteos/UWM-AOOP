@@ -1,9 +1,15 @@
-public class Pupil extends java.lang.Cloneable {
+import java.util.*;
+public class Pupil {
 
     private String name;
 
+    public Pupil(String name){
+        this.name=name;
+    }
     public Pupil(Pupil p) {
-        this.name = p.getName();
+        if(p!=null){
+            this.name = p.getName();
+        }
     }
 
     public Pupil clone() {

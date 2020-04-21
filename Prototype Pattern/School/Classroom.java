@@ -1,11 +1,21 @@
-public class Classroom extends java.lang.Cloneable{
+import java.util.*;
+public class Classroom {
 
     private List<Pupil> pupils;
     private String className;
 
+    public Classroom(String className, List<Pupil> pupils){
+        this.className=className;
+        this.pupils=pupils;
+    }
     public Classroom(Classroom c) {
-        this.className=c.getClassName();
-        this.pupils = List.copyOf(c.getPupils());
+        if(c!=null){
+            this.className=c.getClassName();
+            this.pupils = new ArrayList<Pupil>();
+            for(Pupil p: c.getPupils()){
+                this.pupils.add(p.clone());
+            }
+        }
     }
 
     public Classroom clone() {
