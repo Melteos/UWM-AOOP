@@ -1,5 +1,17 @@
 public class main {
 
+    public static boolean equals2(StringBuilder sb1, StringBuilder sb2) {
+        if(sb1.length() != sb2.length())
+            return false;
+        else {
+            for(int i=0; i<sb1.length(); i++) {
+                if(sb1.charAt(i) != sb2.charAt(i) )
+                    return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String args[]) {
 
         System.out.println("String is immutable while StringBuilder is not.");
@@ -19,7 +31,9 @@ public class main {
         System.out.println("s1 equals s2:"+ s1.equals(s2));
         StringBuilder sb1 = new StringBuilder(STR);
         StringBuilder sb2 = new StringBuilder(STR);
-        System.out.println("sb1 equals sb2:"+sb1.equals(sb2));
+        //System.out.println("sb1 equals sb2:"+sb1.equals(sb2));
+        System.out.println("sb1 equals sb2:"+equals2(sb1,sb2));
+
 
         System.out.println("String concatenation takes shorter with StringBuilder, ie. StringBuilder's performance is better.");
         String sm = "fast";
