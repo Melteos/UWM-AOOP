@@ -7,6 +7,9 @@ public class runner {
         Cable cablephone = new Cable("Siemens",10007,false);
         Cable cablecopy = (Cable) cablephone.copy();
 
+        System.out.println(mobilephone.getBrand()==mobilecopy.getBrand());
+        System.out.println(cablephone.getBrand()==cablecopy.getBrand());
+
         System.out.println("Original: " + mobilephone.type + " " + mobilephone + " " + mobilephone.getBrand() + " " + mobilephone.getModel() );
         System.out.println("Copy: " + mobilecopy.type + " " + mobilecopy + " " + mobilecopy.getBrand() + " " + mobilecopy.getModel() );
         System.out.println("Original: " + cablephone.type + " " + cablephone + " " + cablephone.getBrand() + " " + cablephone.getModel() );

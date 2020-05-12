@@ -10,7 +10,7 @@ public class Cable extends Telephone {
 
     @java.lang.Override
     public Telephone copy() {
-        Cable cablePhoneClone = new Cable(this.getBrand(),this.getModel(),this.getNfc());
+        Cable cablePhoneClone = new Cable(new String(this.getBrand()),this.getModel(),this.getNfc());
         return cablePhoneClone;
     }
 }

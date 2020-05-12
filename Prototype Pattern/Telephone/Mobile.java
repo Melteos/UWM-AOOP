@@ -10,7 +10,7 @@ public class Mobile extends Telephone{
 
     @java.lang.Override
     public Telephone copy() {
-        Mobile mobilePhoneClone = new Mobile(this.getBrand(),this.getModel(),this.getNfc());
+        Mobile mobilePhoneClone = new Mobile(new String(this.getBrand()),this.getModel(),this.getNfc());
         return mobilePhoneClone;
     }
 }
